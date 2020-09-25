@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var goods = [
+        {
+            product: "pen",
+            price: 100,
+            count: 7 // 700
+        },
+        {
+            product: "pencil",
+            price: 300,
+            count: 5 // 1500
+        },
+        {
+            product: "file",
+            price: 900,
+            count: 9 // 8100
+        },
+        {
+            product: "paper",
+            price: 400,
+            count: 10 //4000
+        }
+    ];
+
+    function sumCart(items) {
+        var s = 0;
+        for (var item of items) {
+            s = s + item.price * item.count;
+
+        }
+        return s
+    }
+    alert(sumCart(goods));
+</script>
+
+
+
+</html>
