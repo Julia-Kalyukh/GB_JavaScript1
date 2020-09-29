@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var max = 999;
+        var n = {
+            number: prompt('Введите число от 0 до 999'),
+            units: 0,
+            tens: 0,
+            hundreds: 0,
+        };
+        if (n.number <= 9) {
+            n.units = n.number;
+        } else if (n.number <= 999) {
+            n.units = Math.floor(n.number % 10);
+            n.tens = Math.floor(n.number / 10 % 10);
+            n.hundreds = Math.floor(n.number / 100 % 10);
+        } else {
+            n.number = 0;
+            console.log('Неверное число');
+        }
+        console.log(n);
+    </script>
+</body>
+
+</html>
