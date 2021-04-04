@@ -1,67 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task4</title>
 </head>
-
 <body>
-    <script>
-        var a
-        a = prompt('Введите число от 1 до 15');
+    <!-- 4. Присвоить переменной 'а' значение в промежутке [1..15].
+        С помощью оператора switch организовать вывод чисел от 'a' до 15 -->
+
+    <script> //Вариант 1 - реализация через switch
+
+        var a = +prompt('Введите число от 1 до 15', '');
         switch (a) {
-            case '1':
-                alert('1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '2':
-                alert('2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '3':
-                alert('3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '4':
-                alert('4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '5':
-                alert('5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '6':
-                alert('6, 7, 8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '7':
-                alert('7, 8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '8':
-                alert('8, 9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '9':
-                alert('9, 10, 11, 12, 13, 14, 15');
-                break;
-            case '10':
-                alert('10, 11, 12, 13, 14, 15');
-                break;
-            case '11':
-                alert('11, 12, 13, 14, 15');
-                break;
-            case '12':
-                alert('12, 13, 14, 15');
-                break;
-            case '13':
-                alert('13, 14, 15');
-                break;
-            case '14':
-                alert('14, 15');
-                break;
-            case '15':
-                alert('15');
-                break;
+            case 1:
+                document.write(1 + ', ');
+            case 2:
+                document.write(2 + ', ');
+            case 3:
+                document.write(3 + ', ');
+            case 4:
+                document.write(4 + ', ');
+            case 5:
+                document.write(5 + ', ');
+            case 6:
+                document.write(6 + ', ');
+            case 7:
+                document.write(7 + ', ');
+            case 8:
+                document.write(8 + ', ');
+            case 9:
+                document.write(9 + ', ');
+            case 10:
+                document.write(10 + ', ');
+            case 11:
+                document.write(11 + ', ');
+            case 12:
+                document.write(12 + ', ');
+            case 13:
+                document.write(13 + ', ');
+            case 14:
+                document.write(14 + ', ');
+            case 15:
+                document.write(15);
+            break;
             default:
                 alert('Нет таких значений');
         }
+    </script>
+    <br>
+    <script> // Вариант 2 - реализация через рекурсию В.1
 
+        function rec(a, str=''){
+            if (a == 15){
+                return (str + a);
+            }
+            str += a++ +" ";
+            return rec(a,str);
+
+        }
+
+        var a = +prompt('Введите число от 1 до 15');
+        if (a>=1 && a<=15) {
+            document.write(rec(a));
+        }
+        else {
+            alert('Нет таких значений');
+        }
+    </script>
+    <br>
+    <script> // Вариант 3 - реализация через рекурсию и switch
+
+        var a = +prompt('Введите число от 1 до 15');
+        console.log(`a = ${a}`);
+
+        function rec2(number) {
+            switch(true){
+                case number > 0 && number < 15:
+                    document.write(number + '; ');
+                    rec2(number + 1);
+                break;
+                case number == 15:
+                    document.write(15);
+                break; 
+                default:
+                    alert('Нет таких значений');                
+            }
+        }
+        rec2(a);
     </script>
 </body>
-
 </html>
