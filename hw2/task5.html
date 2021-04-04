@@ -8,35 +8,36 @@
 </head>
 
 <body>
-    <script>
-        // var a = 15;
-        //var b = 3;
+       <!-- 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами.
+    Обязательно использовать оператор return. -->
 
+    <script>
         function plus(a, b) {
             return a + b;
         }
-        x = plus(15, 3);
-        alert(x);
-
         function minus(a, b) {
             return a - b;
         }
-        x = minus(15, 3);
-        alert(x);
-
         function div(a, b) {
-            return a / b;
+            if(b != 0){
+                return a / b;
+            }
+            return alert('error');
         }
-        x = div(15, 3);
-        alert(x);
-
         function mult(a, b) {
             return a * b;
         }
-        x = mult(15, 3);
-        alert(x);
+
+        var a = +prompt('Введите значение "a":');
+        var b = +prompt('Введите значение "b":');
+
+        document.write("Сложение: " + `${a}`+ " + " + `${b}` + " = " + plus(a,b) + "<br \/>");
+        document.write("Вычитание: " + `${a}`+ " - " + `${b}` + " = " + minus(a,b) + "<br \/>");
+        document.write("Деление: " + `${a}`+ " / " + `${b}` + " = " + div(a,b)+ "<br \/>");
+        document.write("Умножение: " + `${a}`+ " * " + `${b}` + " = " + mult(a,b) + "<br \/>");
 
     </script>
+
 </body>
 
 </html>
