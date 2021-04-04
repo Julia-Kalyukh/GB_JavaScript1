@@ -48,8 +48,11 @@
             default:
                 alert('Нет таких значений');
         }
+        
     </script>
+    
     <br>
+    
     <script> // Вариант 2 - реализация через рекурсию В.1
 
         function rec(a, str=''){
@@ -58,7 +61,6 @@
             }
             str += a++ +" ";
             return rec(a,str);
-
         }
 
         var a = +prompt('Введите число от 1 до 15');
@@ -68,8 +70,11 @@
         else {
             alert('Нет таких значений');
         }
+        
     </script>
+    
     <br>
+    
     <script> // Вариант 3 - реализация через рекурсию и switch
 
         var a = +prompt('Введите число от 1 до 15');
@@ -89,6 +94,8 @@
             }
         }
         rec2(a);
+        
     </script>
+    
 </body>
 </html>
