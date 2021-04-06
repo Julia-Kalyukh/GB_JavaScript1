@@ -8,43 +8,48 @@
 </head>
 
 <body>
+    
+<!-- 2. С этого урока начинаем работать с функционалом интернет-магазина.
+        Предположим, есть сущность корзины.
+        Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. -->
 
-</body>
-<script>
-    var goods = [
+    <script>
+        
+        var goods = [
         {
             product: "pen",
             price: 100,
-            count: 7 // 700
+            count: 7, // 700
         },
         {
             product: "pencil",
             price: 300,
-            count: 5 // 1500
+            count: 5, // 1500
         },
         {
             product: "file",
             price: 900,
-            count: 9 // 8100
+            count: 9, // 8100
         },
         {
             product: "paper",
             price: 400,
-            count: 10 //4000
+            count: 10, //4000
         }
-    ];
+        ];
 
-    function sumCart(items) {
-        var s = 0;
-        for (var item of items) {
-            s = s + item.price * item.count;
+        function countBasket(mas) {
+            var sumCart = 0;
+            for (var item of mas) {
+                sumCart += (item.price * item.count)
 
+            }
+            return sumCart
         }
-        return s
-    }
-    alert(sumCart(goods));
-</script>
+        alert(countBasket(goods));
 
+    </script>
 
+</body>
 
 </html>
